@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tables Page</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <span class="fa fa-fire"></span> Friend Finder</h1>
+      <hr>
+      <h2 class="text-center">Answer questions to be matched with compatible friends!</h2>
+      <br>
+
+      <div class="text-center">
+        <a href="/survey">
+          <button class="btn btn-lg btn-primary">
+            <span class="fa fa-list-alt"></span> View Survey</button>
+        </a>
+      </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends" id="api">API Friends </a> |
+          <!-- replace with friend finder info -->
+          <!-- <a href="https://github.com/afhaque/HotRestaurant">GitHub Repo</a> -->
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="../data/friends.js"></script>
+  <script>
+    // $(document).on("click", "api", function () {
+    //   $.get("friendData", function (data, res, status) {
+    //     console.log("friendData");
+    //   })
+    // });
+
+
+    // $("api")on("click", (function () {
+    //   $.get("friendData", function (data, status) {
+    //     alert("Data: " + data + "\nStatus: " + status);
+    //   });
+    // });
+  </script>
+  <!-- ^this is a relative path to link the html tag to friends.js to link event handlers-->
+</body>
+
+</html>
