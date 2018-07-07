@@ -3,18 +3,91 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FriendFinder</title>
+
   <!-- Latest compiled and minified CSS & JS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Gaegu:400,700" rel="stylesheet">
+
+  <!-- Chosen -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
-  <title>Document</title>
 </head>
 
+<style>
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: rgb(17, 33, 122);
+    color: #FFF;
+    padding: 2% 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.2em;
+    border: 0;
+  }
+
+  .navbar-brand {
+    float: left;
+    min-height: 65px;
+    max-height: 300px;
+    padding: 0 15px 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .navbar-brand img {
+    height: auto;
+    width: 70px;
+  }
+
+  .navbar-inverse .navbar-nav .active a,
+  .navbar-inverse .navbar-nav .active a:focus,
+  .navbar-inverse .navbar-nav .active a:hover {
+    color: #fff;
+    background-color: rgb(17, 33, 122);
+  }
+
+  .navbar-inverse .navbar-nav li a {
+    color: rgba(0, 255, 42, 0.333);
+  }
+
+  .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+  }
+</style>
+
 <body>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="/">Home</a>
+          </li>
+          <li class="active">
+            <a href="/">About</a>
+          </li>
+          <li class="active">
+            <a href="/">Testimonials</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
   <div class="container">
 
     <h2>Survey Questions</h2>
@@ -47,7 +120,8 @@
     <h3>
       <strong>Question 2</strong>
     </h3>
-    <h4>You prefer outdoor activities.</h4>
+    <h4>You prefer outdoor activities.
+    </h4>
     <select class="chosen-select" id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -89,7 +163,7 @@
     <h3>
       <strong>Question 5</strong>
     </h3>
-    <h4>You prefer dogs over cats.</h4>
+    <h4>You prefer dogs over cats </h4>
     <select class="chosen-select" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
@@ -170,21 +244,13 @@
     <br>
 
     <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+    <button type="submit" class="btn btn-secondary btn-lg btn-block" id="submit">
       <i class="fa fa-check-circle" aria-hidden="true"></i>
       Submit</button>
 
     <hr>
-    <footer class="footer">
-      <div class="container">
-        <p>
-          <a href="/api/friends">API Friends List</a> |
-          <a href="https://github.com/drutter89/friendfinder">GitHub Repo</a>
-        </p>
-      </div>
-    </footer>
-
   </div>
+
   <!-- Modal -->
   <div id="results-modal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -208,6 +274,7 @@
 
     </div>
   </div>
+
   <script type="text/javascript">
     // Chosen CSS
     var config = {
